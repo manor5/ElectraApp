@@ -20,3 +20,4 @@ activate:
 
 dependencies:
 	pip install -r requirements.txt
+	a
