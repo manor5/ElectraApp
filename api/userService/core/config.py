@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     
     # MFA Configuration
     MFA_ISSUER: str = os.getenv("MFA_ISSUER", "ElectraApp")
+    MFA_BYPASS: bool = os.getenv("MFA_BYPASS", "True").lower() == "true"  # Set to True to bypass MFA
     OTP_EXPIRE_MINUTES: int = 5
     
     # Application

@@ -5,7 +5,12 @@ pydantic
 pydantic-settings
 psycopg2-binary
 alembic
-passlib[bcrypt]
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
 python-jose[cryptography]
 PyJWT
 python-dotenv
+phonenumbers
+pyotp
+qrcode
+pillow

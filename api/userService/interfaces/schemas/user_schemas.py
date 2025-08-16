@@ -30,6 +30,36 @@ class UserServiceRoleResponse(BaseModel):
     class Config:
         from_attributes = True
 
+# Request schemas for admin operations
+class ServiceCreateRequest(BaseModel):
+    name: str
+    description: Optional[str] = None
+
+class ServiceUpdateRequest(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    is_active: Optional[bool] = None
+
+class UserRoleCreateRequest(BaseModel):
+    name: str
+    description: Optional[str] = None
+
+class UserRoleUpdateRequest(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    is_active: Optional[bool] = None
+
+class UserServiceRoleCreateRequest(BaseModel):
+    user_id: int
+    service_id: int
+    role_id: int
+
+class UserServiceRoleUpdateRequest(BaseModel):
+    user_id: Optional[int] = None
+    service_id: Optional[int] = None
+    role_id: Optional[int] = None
+    is_active: Optional[bool] = None
+
 # Request schemas
 class UserCreateRequest(BaseModel):
     phone_number: str
